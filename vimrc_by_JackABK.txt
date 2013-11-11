@@ -17,7 +17,8 @@ syntax on
 set tabstop=4
 set showmatch
 hi comment  term=bold ctermfg=cyan
-
+"folding func enable 
+set foldmethod=syntax
 "***************end JackABK ***************
 
 
@@ -31,6 +32,17 @@ endif
 "vim expension tool
 map <f9> :Tlist<CR>
 "map <f9> :Tlist<CR> :SrcExplToggle
+
+
+"-----------------support recognize the UTF-8 mode--------
+"refet to : http://blog.xuite.net/smes.pc/blog/32122095
+set fileencodings=utf8,big5,gbk,latin1
+set fileencoding=big5
+set <C-u>=^U
+set <C-b>=^B
+map <C-u> :set fileencoding=utf8
+map <C-b> :set fileencoding=big5
+"------------------------------end UTF-8------------------
 
 
 
