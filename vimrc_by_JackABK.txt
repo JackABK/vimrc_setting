@@ -4,8 +4,7 @@ set hlsearch             "search the string will be highlight
 set incsearch
 set cursorline
 autocmd InsertEnter * hi CursorLine   cterm=NONE ctermbg=darkblue ctermfg=NONE
-autocmd InsertLeave * hi clear
-autocmd InsertLeave * hi comment    term=bold ctermfg=cyan
+autocmd InsertLeave * hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE
 
 set nocompatible
 set backspace=2
@@ -16,9 +15,8 @@ set background=dark
 syntax on
 set tabstop=4
 set showmatch
-hi comment  term=bold ctermfg=cyan
 "folding func enable 
-set foldmethod=syntax
+set foldmethod=indent
 "***************end JackABK ***************
 
 
@@ -108,4 +106,6 @@ hi def link arduinoMethod Function
 hi def link arduinoModule Identifier
 
 autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino
+
+
 "----------------------ending for arduino----------------------
